@@ -5,21 +5,21 @@
 class Bort < Formula
   desc "migration cockpit for self-hosted PaaS platform moves"
   homepage "https://github.com/aikins01/bort"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/aikins01/bort/releases/download/v0.1.0/bort_Darwin_x86_64.tar.gz"
-      sha256 "9eb90f6bed3ecc716b15da6e9ef6415bfada1b7be09af6595e2b8e7fcd973ff8"
+      url "https://github.com/aikins01/bort/releases/download/v0.1.1/bort_Darwin_x86_64.tar.gz"
+      sha256 "c7c8139b2c95be561ff1aaa75723e07d7732c8ab5b10dbbabc2a8d9c857d9b95"
 
       define_method(:install) do
         bin.install "bort"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/aikins01/bort/releases/download/v0.1.0/bort_Darwin_arm64.tar.gz"
-      sha256 "ba563c1243ce0994089376ee26e36f6e3224156d14cede37783f5ec630281711"
+      url "https://github.com/aikins01/bort/releases/download/v0.1.1/bort_Darwin_arm64.tar.gz"
+      sha256 "51aedf83f0fe81b6119dc845d49fe19876c947d48a173fa15db670a886484222"
 
       define_method(:install) do
         bin.install "bort"
@@ -29,15 +29,15 @@ class Bort < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/aikins01/bort/releases/download/v0.1.0/bort_Linux_x86_64.tar.gz"
-      sha256 "3d7602c3659a10498656739253ca149828312dfd9ad563c0b3107ce0290745ed"
+      url "https://github.com/aikins01/bort/releases/download/v0.1.1/bort_Linux_x86_64.tar.gz"
+      sha256 "02ec1654ef6fe3754e044afa8abe456825c480bf7807678bf63c2acf4a3bea63"
       define_method(:install) do
         bin.install "bort"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/aikins01/bort/releases/download/v0.1.0/bort_Linux_arm64.tar.gz"
-      sha256 "b1cd424575580cf8d257626f5e2eece62c3e7485b93f9db67237c96abbec9ed7"
+      url "https://github.com/aikins01/bort/releases/download/v0.1.1/bort_Linux_arm64.tar.gz"
+      sha256 "740f5356547ee5baa30d35a116e30c112d3cfd7f13959fd431e95a4b46677a61"
       define_method(:install) do
         bin.install "bort"
       end
